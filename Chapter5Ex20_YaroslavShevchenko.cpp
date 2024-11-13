@@ -30,12 +30,15 @@ int main()
 {
     int realN = randomNum();
     int guessedN = -1;
+    int tries = 0;
 
     while (guessedN != realN) {
+        tries++;
         cout << "guess the number (0-99): ";
         cin >> guessedN;
         guess(realN, guessedN);
     }
+    cout << "\nYou made " << tries << " guesses";
     
 }
 
